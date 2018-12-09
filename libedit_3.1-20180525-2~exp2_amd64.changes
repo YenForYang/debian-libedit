@@ -1,0 +1,37 @@
+Format: 1.8
+Date: Tue, 06 Nov 2018 00:56:26 +0100
+Source: libedit
+Binary: libedit2 libedit-dev
+Built-For-Profiles: nobiarch nocheck
+Architecture: amd64
+Version: 3.1-20180525-2~exp2
+Distribution: UNRELEASED
+Urgency: medium
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Changed-By: Guillem Jover <guillem@debian.org>
+Description:
+ libedit-dev - BSD editline and history libraries (development files)
+ libedit2   - BSD editline and history libraries
+Changes:
+ libedit (3.1-20180525-2~exp2) UNRELEASED; urgency=medium
+ .
+   * Remove doubled heading spaces from Copyright field in debian/copyright.
+   * Move examples installation from dh_installdocs override into an .examples
+     debhelper fragment file, and remove the now unnecessary override.
+   * Add a comment to debian/rules to remove the dh_compress override on
+     debhelper compatibility level 12.
+Checksums-Sha1:
+ 31c4ac629a4e8d2fb47db73dc46e97c4fb3b3478 1156668 libedit-dev_3.1-20180525-2~exp2_amd64.deb
+ aec4c8c9d2be619c7b448557e73701b79b335357 165228 libedit2-dbgsym_3.1-20180525-2~exp2_amd64.deb
+ 1abf064e732e8f05a73829650ba1eb389e808c60 151508 libedit2_3.1-20180525-2~exp2_amd64.deb
+ 28a700a337c98891c4c7c51c7bcb6a1cd841da83 5567 libedit_3.1-20180525-2~exp2_amd64.buildinfo
+Checksums-Sha256:
+ fa2478b6c2c21bb74186aa5c3aed8319004c8c66869072e59a0cc73fa29aa205 1156668 libedit-dev_3.1-20180525-2~exp2_amd64.deb
+ 33a0b255058eb75598a0ffbef3b120923b081fbebe0e7366f3525faf895d97f3 165228 libedit2-dbgsym_3.1-20180525-2~exp2_amd64.deb
+ d5e6ba9396b6ea56fd3e2e0cf006a58a4b9f32e65bdbf6c26d8f2986ca377ac5 151508 libedit2_3.1-20180525-2~exp2_amd64.deb
+ 4906a56bb629f25764b97fed157ce7072e56a7f0e6ad91307cf907d2655e409c 5567 libedit_3.1-20180525-2~exp2_amd64.buildinfo
+Files:
+ 8e86afd30764f18071f9244a26963199 1156668 libdevel optional libedit-dev_3.1-20180525-2~exp2_amd64.deb
+ 3686dbc5dcf9ccd888e352859b21bfb0 165228 debug optional libedit2-dbgsym_3.1-20180525-2~exp2_amd64.deb
+ be6bf7d6ef00cfb345117d5e7c35e1db 151508 libs optional libedit2_3.1-20180525-2~exp2_amd64.deb
+ 1634dd7a8bceab201942212088633302 5567 libs optional libedit_3.1-20180525-2~exp2_amd64.buildinfo

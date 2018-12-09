@@ -1,0 +1,3 @@
+shlibs:Depends=libc6 (>= 2.14), libtinfo6 (>= 6)
+misc:Depends=
+misc:Pre-Depends=

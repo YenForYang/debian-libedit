@@ -1,0 +1,4 @@
+libedit-dev_3.1-20180525-2~exp2_amd64.deb libdevel optional
+libedit2-dbgsym_3.1-20180525-2~exp2_amd64.deb debug optional automatic=yes
+libedit2_3.1-20180525-2~exp2_amd64.deb libs optional
+libedit_3.1-20180525-2~exp2_amd64.buildinfo libs optional

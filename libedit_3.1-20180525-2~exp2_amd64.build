@@ -1,0 +1,573 @@
+ dpkg-buildpackage -D -us -uc -ui -b -Jauto -Pnobiarch,nocheck
+dpkg-buildpackage: info: source package libedit
+dpkg-buildpackage: info: source version 3.1-20180525-2~exp2
+dpkg-buildpackage: info: source distribution UNRELEASED
+dpkg-buildpackage: info: source changed by Guillem Jover <guillem@debian.org>
+ dpkg-source --before-build .
+dpkg-buildpackage: info: host architecture amd64
+ debian/rules clean
+dh clean
+   dh_autoreconf_clean
+   debian/rules override_dh_clean
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+dh_clean
+# Remove Apple time machine files
+rm -f `find . -iname '._*'`
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+ debian/rules binary
+dh binary
+   dh_update_autotools_config
+   dh_autoreconf
+libtoolize: putting auxiliary files in '.'.
+libtoolize: copying file './ltmain.sh'
+libtoolize: putting macros in AC_CONFIG_MACRO_DIRS, 'm4'.
+libtoolize: copying file 'm4/libtool.m4'
+libtoolize: copying file 'm4/ltoptions.m4'
+libtoolize: copying file 'm4/ltsugar.m4'
+libtoolize: copying file 'm4/ltversion.m4'
+libtoolize: copying file 'm4/lt~obsolete.m4'
+configure.ac:32: installing './compile'
+configure.ac:34: installing './missing'
+doc/Makefile.am:59: warning: '%'-style pattern rules are a GNU make extension
+examples/Makefile.am: installing './depcomp'
+   debian/rules override_dh_auto_configure
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+dh_auto_configure -- --enable-examples
+	./configure --build=x86_64-linux-gnu --prefix=/usr --includedir=\${prefix}/include --mandir=\${prefix}/share/man --infodir=\${prefix}/share/info --sysconfdir=/etc --localstatedir=/var --disable-silent-rules --libdir=\${prefix}/lib/x86_64-linux-gnu --libexecdir=\${prefix}/lib/x86_64-linux-gnu --runstatedir=/run --disable-maintainer-mode --disable-dependency-tracking --enable-examples
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+checking for gcc... icc
+checking whether the C compiler works... yes
+checking for C compiler default output file name... a.out
+checking for suffix of executables... 
+checking whether we are cross compiling... no
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether icc accepts -g... yes
+checking for icc option to accept ISO C89... none needed
+checking whether icc understands -c and -o together... yes
+checking how to run the C preprocessor... icc -E
+checking for grep that handles long lines and -e... /bin/grep
+checking for egrep... /bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking minix/config.h usability... no
+checking minix/config.h presence... no
+checking for minix/config.h... no
+checking whether it is safe to define __EXTENSIONS__... yes
+checking for a BSD-compatible install... /usr/bin/install -c
+checking whether build environment is sane... yes
+checking for a thread-safe mkdir -p... /bin/mkdir -p
+checking for gawk... gawk
+checking whether make sets $(MAKE)... yes
+checking whether make supports the include directive... yes (GNU style)
+checking whether make supports nested variables... yes
+checking dependency style of icc... none
+checking build system type... x86_64-pc-linux-gnu
+checking host system type... x86_64-pc-linux-gnu
+checking how to print strings... printf
+checking for a sed that does not truncate output... /bin/sed
+checking for fgrep... /bin/grep -F
+checking for ld used by icc... xild
+checking if the linker (xild) is GNU ld... yes
+checking for BSD- or MS-compatible name lister (nm)... /usr/bin/nm -B
+checking the name lister (/usr/bin/nm -B) interface... BSD nm
+checking whether ln -s works... yes
+checking the maximum length of command line arguments... 1572864
+checking how to convert x86_64-pc-linux-gnu file names to x86_64-pc-linux-gnu format... func_convert_file_noop
+checking how to convert x86_64-pc-linux-gnu file names to toolchain format... func_convert_file_noop
+checking for xild option to reload object files... -r
+checking for objdump... objdump
+checking how to recognize dependent libraries... pass_all
+checking for dlltool... no
+checking how to associate runtime and link libraries... printf %s\n
+checking for archiver @FILE support... @
+checking for strip... strip
+checking for ranlib... ranlib
+checking command to parse /usr/bin/nm -B output from icc object... ok
+checking for sysroot... no
+checking for a working dd... /bin/dd
+checking how to truncate binary pipes... /bin/dd bs=4096 count=1
+checking for mt... mt
+checking if mt is a manifest tool... no
+checking for dlfcn.h... yes
+checking for objdir... .libs
+checking if icc supports -fno-rtti -fno-exceptions... yes
+checking for icc option to produce PIC... -fPIC -DPIC
+checking if icc PIC flag -fPIC -DPIC works... yes
+checking if icc static flag -static works... no
+checking if icc supports -c -o file.o... yes
+checking if icc supports -c -o file.o... (cached) yes
+checking whether the icc linker (xild -m elf_x86_64) supports shared libraries... xild: warning #10013: no objects specified for multi-file optimization
+xild: executing 'ld'
+yes
+checking whether -lc should be explicitly linked in... no
+checking dynamic linker characteristics... GNU/Linux ld.so
+checking how to hardcode library paths into programs... immediate
+checking whether stripping libraries is possible... yes
+checking if libtool supports shared libraries... yes
+checking whether to build shared libraries... yes
+checking whether to build static libraries... yes
+checking whether make supports nested variables... (cached) yes
+checking for icc option to accept ISO C99... none needed
+checking whether ln -s works... yes
+checking for gawk... (cached) gawk
+checking for nroff... /usr/bin/nroff
+checking for tgetent in -ltermcap... yes
+checking for pkg-config... /usr/bin/pkg-config
+checking pkg-config is at least version 0.9.0... yes
+checking for LIBBSD... yes
+checking if you want wide-character code... no
+configure: WARNING: --enable-widec is deprecated, wide-character/UTF-8 is always enabled
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for ANSI C header files... (cached) yes
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking limits.h usability... yes
+checking limits.h presence... yes
+checking for limits.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking for stdlib.h... (cached) yes
+checking for string.h... (cached) yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking for unistd.h... (cached) yes
+checking curses.h usability... yes
+checking curses.h presence... yes
+checking for curses.h... yes
+checking ncurses.h usability... yes
+checking ncurses.h presence... yes
+checking for ncurses.h... yes
+checking sys/cdefs.h usability... yes
+checking sys/cdefs.h presence... yes
+checking for sys/cdefs.h... yes
+checking termcap.h usability... yes
+checking termcap.h presence... yes
+checking for termcap.h... yes
+checking for termcap.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking for term.h... yes
+checking for struct dirent.d_namlen... no
+checking for an ANSI C-conforming const... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking for u_int32_t... yes
+checking whether closedir returns void... no
+checking vfork.h usability... no
+checking vfork.h presence... no
+checking for vfork.h... no
+checking for fork... yes
+checking for vfork... yes
+checking for working fork... yes
+checking for working vfork... (cached) yes
+checking whether icc needs -traditional... no
+checking return type of signal handlers... void
+checking whether lstat correctly handles trailing slash... yes
+checking whether stat accepts an empty string... no
+checking for endpwent... yes
+checking for isascii... yes
+checking for memchr... yes
+checking for memset... yes
+checking for re_comp... yes
+checking for regcomp... yes
+checking for strcasecmp... yes
+checking for strchr... yes
+checking for strcspn... yes
+checking for strdup... yes
+checking for strerror... yes
+checking for strrchr... yes
+checking for strstr... yes
+checking for strtol... yes
+checking for issetugid... no
+checking for getline... yes
+checking for __secure_getenv... no
+checking for secure_getenv... yes
+checking for fgetln... yes
+checking for strlcpy... yes
+checking for strlcat... yes
+checking for vis... yes
+checking for unvis... yes
+checking for wcsdup... yes
+checking whether getpwnam_r and getpwuid_r are posix like... yes
+checking whether getpwnam_r and getpwuid_r are posix _draft_ like... no
+checking that generated files are newer than configure... done
+configure: creating ./config.status
+config.status: creating Makefile
+config.status: creating libedit.pc
+config.status: creating src/Makefile
+config.status: creating doc/Makefile
+config.status: creating examples/Makefile
+config.status: creating config.h
+config.status: executing depfiles commands
+config.status: executing libtool commands
+configure: WARNING: unrecognized options: --disable-maintainer-mode
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+   dh_auto_build
+	make -j8
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+make  all-recursive
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+Making all in src
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+AWK=gawk sh ./makelist -h ./vi.c > vi.h
+AWK=gawk sh ./makelist -h ./emacs.c > emacs.h
+AWK=gawk sh ./makelist -h ./common.c > common.h
+AWK=gawk sh ./makelist -bh ./vi.c ./emacs.c ./common.c > help.h
+AWK=gawk sh ./makelist -fh vi.h emacs.h common.h  > fcns.h
+AWK=gawk sh ./makelist -fc vi.h emacs.h common.h  > func.h
+make  all-am
+make[4]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o chared.lo chared.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o common.lo common.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o el.lo el.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o eln.lo eln.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o emacs.lo emacs.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o hist.lo hist.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o keymacro.lo keymacro.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o map.lo map.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c chared.c  -fPIC -DPIC -o .libs/chared.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c el.c  -fPIC -DPIC -o .libs/el.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c common.c  -fPIC -DPIC -o .libs/common.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c map.c  -fPIC -DPIC -o .libs/map.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c keymacro.c  -fPIC -DPIC -o .libs/keymacro.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c eln.c  -fPIC -DPIC -o .libs/eln.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c emacs.c  -fPIC -DPIC -o .libs/emacs.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c hist.c  -fPIC -DPIC -o .libs/hist.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c hist.c -o hist.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c keymacro.c -o keymacro.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c el.c -o el.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c emacs.c -o emacs.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c eln.c -o eln.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c map.c -o map.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c chared.c -o chared.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c common.c -o common.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o chartype.lo chartype.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o parse.lo parse.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o prompt.lo prompt.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c chartype.c  -fPIC -DPIC -o .libs/chartype.o
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o read.lo read.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c parse.c  -fPIC -DPIC -o .libs/parse.o
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o refresh.lo refresh.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o search.lo search.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o sig.lo sig.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o terminal.lo terminal.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c prompt.c  -fPIC -DPIC -o .libs/prompt.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c read.c  -fPIC -DPIC -o .libs/read.o
+chartype.c(208): warning #2218: result of call is not used
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c search.c  -fPIC -DPIC -o .libs/search.o
+  		wctomb(NULL, L'\0');
+  		^
+
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c refresh.c  -fPIC -DPIC -o .libs/refresh.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c sig.c  -fPIC -DPIC -o .libs/sig.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c terminal.c  -fPIC -DPIC -o .libs/terminal.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c chartype.c -o chartype.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c prompt.c -o prompt.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c parse.c -o parse.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c sig.c -o sig.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c search.c -o search.o >/dev/null 2>&1
+terminal.c(442): warning #120: return value type does not match the function type
+  	return b;
+  	       ^
+
+terminal.c(468): warning #556: a value of type "wchar_t={int} **" cannot be assigned to an entity of type "wint_t={unsigned int} **"
+  	el->el_display = terminal_alloc_buffer(el);
+  	               ^
+
+terminal.c(471): warning #556: a value of type "wchar_t={int} **" cannot be assigned to an entity of type "wint_t={unsigned int} **"
+  	el->el_vdisplay = terminal_alloc_buffer(el);
+  	                ^
+
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c refresh.c -o refresh.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o tty.lo tty.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c read.c -o read.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o vi.lo vi.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o tokenizer.lo tokenizer.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c terminal.c -o terminal.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o tokenizern.lo tokenizern.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tty.c  -fPIC -DPIC -o .libs/tty.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c vi.c  -fPIC -DPIC -o .libs/vi.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tokenizer.c  -fPIC -DPIC -o .libs/tokenizer.o
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o history.lo history.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o historyn.lo historyn.c
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o filecomplete.lo filecomplete.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tokenizern.c  -fPIC -DPIC -o .libs/tokenizern.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tokenizer.c -o tokenizer.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c history.c  -fPIC -DPIC -o .libs/history.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c historyn.c  -fPIC -DPIC -o .libs/historyn.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c filecomplete.c  -fPIC -DPIC -o .libs/filecomplete.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tty.c -o tty.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o readline.lo readline.c
+vi.c(1033): warning #2218: result of call is not used
+  	write(fd, cp, len);
+  	^
+
+vi.c(1034): warning #2218: result of call is not used
+  	write(fd, "\n", (size_t)1);
+  	^
+
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c vi.c -o vi.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c readline.c  -fPIC -DPIC -o .libs/readline.o
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c tokenizern.c -o tokenizern.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=compile icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o literal.lo literal.c
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c historyn.c -o historyn.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c history.c -o history.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c filecomplete.c -o filecomplete.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c literal.c  -fPIC -DPIC -o .libs/literal.o
+readline.c(1342): warning #2218: result of call is not used
+  		(void)ftruncate(fileno(fp), off);
+  		      ^
+
+readline.c(1342): warning #2218: result of call is not used
+  		(void)ftruncate(fileno(fp), off);
+  		^
+
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c readline.c -o readline.o >/dev/null 2>&1
+libtool: compile:  icc -DHAVE_CONFIG_H -I. -I.. -Wdate-time -D_FORTIFY_SOURCE=2 -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c literal.c -o literal.o >/dev/null 2>&1
+/bin/bash ../libtool  --tag=CC   --mode=link icc  -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -no-undefined -version-info 2:58:0 -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o libedit.la -rpath /usr/lib/x86_64-linux-gnu chared.lo common.lo el.lo eln.lo emacs.lo hist.lo keymacro.lo map.lo chartype.lo parse.lo prompt.lo read.lo refresh.lo search.lo sig.lo terminal.lo tty.lo vi.lo tokenizer.lo tokenizern.lo history.lo historyn.lo filecomplete.lo readline.lo literal.lo        -ltermcap  -lbsd
+libtool: link: icc -shared  -fPIC -DPIC  .libs/chared.o .libs/common.o .libs/el.o .libs/eln.o .libs/emacs.o .libs/hist.o .libs/keymacro.o .libs/map.o .libs/chartype.o .libs/parse.o .libs/prompt.o .libs/read.o .libs/refresh.o .libs/search.o .libs/sig.o .libs/terminal.o .libs/tty.o .libs/vi.o .libs/tokenizer.o .libs/tokenizern.o .libs/history.o .libs/historyn.o .libs/filecomplete.o .libs/readline.o .libs/literal.o   -ltermcap -lbsd  -g -O2 -fstack-protector-strong -march=native -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax   -Wl,-soname -Wl,libedit.so.2 -o .libs/libedit.so.2.0.58
+libtool: link: (cd ".libs" && rm -f "libedit.so.2" && ln -s "libedit.so.2.0.58" "libedit.so.2")
+libtool: link: (cd ".libs" && rm -f "libedit.so" && ln -s "libedit.so.2.0.58" "libedit.so")
+libtool: link: xiar cru .libs/libedit.a  chared.o common.o el.o eln.o emacs.o hist.o keymacro.o map.o chartype.o parse.o prompt.o read.o refresh.o search.o sig.o terminal.o tty.o vi.o tokenizer.o tokenizern.o history.o historyn.o filecomplete.o readline.o literal.o
+xiar: executing 'ar'
+ar: `u' modifier ignored since `D' is the default (see `U')
+libtool: link: ranlib .libs/libedit.a
+libtool: link: ( cd ".libs" && rm -f "libedit.la" && ln -s "../libedit.la" "libedit.la" )
+make[4]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+Making all in examples
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2 -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o tc1.o tc1.c
+icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2 -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o fileman.o fileman.c
+icc -DHAVE_CONFIG_H -I. -I..   -Wdate-time -D_FORTIFY_SOURCE=2 -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -c -o wtc1.o wtc1.c
+wtc1.c(74): warning #2218: result of call is not used
+  	wctomb(NULL, 0); /* Reset shift state */
+  	^
+
+/bin/bash ../libtool  --tag=CC   --mode=link icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o fileman fileman.o ../src/libedit.la -ltermcap  -lbsd
+/bin/bash ../libtool  --tag=CC   --mode=link icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o tc1 tc1.o ../src/libedit.la -ltermcap  -lbsd
+/bin/bash ../libtool  --tag=CC   --mode=link icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY  -Wl,-z,relro -Wl,--as-needed,--gc-sections,--relax -o wtc1 wtc1.o ../src/libedit.la -ltermcap  -lbsd
+libtool: link: icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/tc1 tc1.o  ../src/.libs/libedit.so -ltermcap -lbsd
+libtool: link: icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/fileman fileman.o  ../src/.libs/libedit.so -ltermcap -lbsd
+libtool: link: icc -I../src -g -O2 -fdebug-prefix-map=/dev/shm/builddeps/libedit-dev/libedit=. -fstack-protector-strong -Wformat -Werror=format-security -march=native -pipe -isystem /usr/include/bsd -DLIBBSD_OVERLAY -Wl,-z -Wl,relro -Wl,--as-needed -Wl,--gc-sections -Wl,--relax -o .libs/wtc1 wtc1.o  ../src/.libs/libedit.so -ltermcap -lbsd
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+Making all in doc
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+   dh_auto_test
+   create-stamp debian/debhelper-build-stamp
+   dh_testroot
+   dh_prep
+   dh_auto_install
+	make -j1 install DESTDIR=/dev/shm/builddeps/libedit-dev/libedit/debian/tmp AM_UPDATE_INFO_DIR=no
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+Making install in src
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+make  install-am
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+make[4]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu'
+ /bin/bash ../libtool   --mode=install /usr/bin/install -c   libedit.la '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu'
+libtool: install: /usr/bin/install -c .libs/libedit.so.2.0.58 /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/libedit.so.2.0.58
+libtool: install: (cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libedit.so.2.0.58 libedit.so.2 || { rm -f libedit.so.2 && ln -s libedit.so.2.0.58 libedit.so.2; }; })
+libtool: install: (cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu && { ln -s -f libedit.so.2.0.58 libedit.so || { rm -f libedit.so && ln -s libedit.so.2.0.58 libedit.so; }; })
+libtool: install: /usr/bin/install -c .libs/libedit.lai /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/libedit.la
+libtool: install: /usr/bin/install -c .libs/libedit.a /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/libedit.a
+libtool: install: chmod 644 /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/libedit.a
+libtool: install: ranlib /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/libedit.a
+libtool: warning: remember to run 'libtool --finish /usr/lib/x86_64-linux-gnu'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/include'
+ /usr/bin/install -c -m 644  histedit.h '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/include/.'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/include/editline'
+ /usr/bin/install -c -m 644  editline/readline.h '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/include/editline'
+make[4]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/src'
+Making install in examples
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Nothing to be done for 'install-data-am'.
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/examples'
+Making install in doc
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3'
+ /usr/bin/install -c -m 644 editline.3edit '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man5'
+ /usr/bin/install -c -m 644 editrc.5edit '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man5'
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man7'
+ /usr/bin/install -c -m 644 editline.7edit '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man7'
+make  install-data-hook
+make[4]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_deletestr.3 && ln -s editline.3edit el_deletestr.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_end.3 && ln -s editline.3edit el_end.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_get.3 && ln -s editline.3edit el_get.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_getc.3 && ln -s editline.3edit el_getc.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_gets.3 && ln -s editline.3edit el_gets.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_init.3 && ln -s editline.3edit el_init.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_init_fd.3 && ln -s editline.3edit el_init_fd.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_insertstr.3 && ln -s editline.3edit el_insertstr.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_line.3 && ln -s editline.3edit el_line.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_parse.3 && ln -s editline.3edit el_parse.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_push.3 && ln -s editline.3edit el_push.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_reset.3 && ln -s editline.3edit el_reset.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_resize.3 && ln -s editline.3edit el_resize.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_set.3 && ln -s editline.3edit el_set.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_source.3 && ln -s editline.3edit el_source.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history.3 && ln -s editline.3edit history.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history_end.3 && ln -s editline.3edit history_end.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history_init.3 && ln -s editline.3edit history_init.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_end.3 && ln -s editline.3edit tok_end.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_init.3 && ln -s editline.3edit tok_init.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_line.3 && ln -s editline.3edit tok_line.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_reset.3 && ln -s editline.3edit tok_reset.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_str.3 && ln -s editline.3edit tok_str.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wdeletestr.3 && ln -s editline.3edit el_wdeletestr.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wget.3 && ln -s editline.3edit el_wget.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wgetc.3 && ln -s editline.3edit el_wgetc.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wgets.3 && ln -s editline.3edit el_wgets.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_winsertstr.3 && ln -s editline.3edit el_winsertstr.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wline.3 && ln -s editline.3edit el_wline.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wparse.3 && ln -s editline.3edit el_wparse.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wpush.3 && ln -s editline.3edit el_wpush.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f el_wset.3 && ln -s editline.3edit el_wset.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history_w.3 && ln -s editline.3edit history_w.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history_wend.3 && ln -s editline.3edit history_wend.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f history_winit.3 && ln -s editline.3edit history_winit.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_wend.3 && ln -s editline.3edit tok_wend.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_winit.3 && ln -s editline.3edit tok_winit.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_wline.3 && ln -s editline.3edit tok_wline.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_wreset.3 && ln -s editline.3edit tok_wreset.3)
+(cd /dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/share/man/man3 && rm -f tok_wstr.3 && ln -s editline.3edit tok_wstr.3)
+make[4]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit/doc'
+make[2]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[3]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[3]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+ /usr/bin/install -c -m 644 libedit.pc '/dev/shm/builddeps/libedit-dev/libedit/debian/tmp/usr/lib/x86_64-linux-gnu/pkgconfig'
+make[3]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[2]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+   dh_install
+   dh_installdocs
+   dh_installchangelogs
+   dh_installexamples
+   dh_installman
+   dh_lintian
+   dh_perl
+   dh_link
+   dh_strip_nondeterminism
+   debian/rules override_dh_compress
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+dh_compress -X.c -XMakefile.in -XMakefile.am
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+   dh_fixperms
+   dh_missing
+   debian/rules override_dh_strip
+make[1]: Entering directory '/dev/shm/builddeps/libedit-dev/libedit'
+dh_strip --dbgsym-migration='libedit2-dbg (<< 3.1-20180525-2~)'
+make[1]: Leaving directory '/dev/shm/builddeps/libedit-dev/libedit'
+   dh_makeshlibs
+dpkg-gensymbols: warning: some new symbols appeared in the symbols file: see diff output below
+dpkg-gensymbols: warning: debian/libedit2/DEBIAN/symbols doesn't match completely debian/libedit2.symbols
+--- debian/libedit2.symbols (libedit2_3.1-20180525-2~exp2_amd64)
++++ dpkg-gensymbolsyXdQ9c	2018-12-09 22:30:55.902476398 +0100
+@@ -1,7 +1,47 @@
+ libedit.so.2 libedit2 #MINVER#
++ __cacheSize@Base 3.1-20180525-2~exp2
+ #MISSING: 3.1-20160618-1# __ct_decode_string@Base 3.1-20140620
+ #MISSING: 3.1-20160618-1# __ct_encode_string@Base 3.1-20140620
++ __intel_avx_rep_memcpy@Base 3.1-20180525-2~exp2
++ __intel_avx_rep_memset@Base 3.1-20180525-2~exp2
++ __intel_memcpy@Base 3.1-20180525-2~exp2
++ __intel_memset@Base 3.1-20180525-2~exp2
++ __intel_mic_avx512f_memcpy@Base 3.1-20180525-2~exp2
++ __intel_mic_avx512f_memset@Base 3.1-20180525-2~exp2
++ __intel_new_memcpy@Base 3.1-20180525-2~exp2
++ __intel_new_memset@Base 3.1-20180525-2~exp2
++ __intel_sse4_strchr@Base 3.1-20180525-2~exp2
++ __intel_sse4_strcpy@Base 3.1-20180525-2~exp2
++ __intel_sse4_strdup@Base 3.1-20180525-2~exp2
++ __intel_sse4_strend@Base 3.1-20180525-2~exp2
++ __intel_sse4_strlen@Base 3.1-20180525-2~exp2
++ __intel_sse4_strncat@Base 3.1-20180525-2~exp2
++ __intel_sse4_strncmp@Base 3.1-20180525-2~exp2
++ __intel_sse4_strrchr@Base 3.1-20180525-2~exp2
++ __intel_ssse3_memcpy@Base 3.1-20180525-2~exp2
++ __intel_ssse3_memmove@Base 3.1-20180525-2~exp2
++ __intel_ssse3_rep_memcpy@Base 3.1-20180525-2~exp2
++ __intel_ssse3_rep_memmove@Base 3.1-20180525-2~exp2
++ __intel_ssse3_strncpy@Base 3.1-20180525-2~exp2
+  _el_fn_complete@Base 2.11-20080614-0
++ _intel_fast_memcpy.A@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.J@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.M@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.P@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.V@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.Z@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy.a@Base 3.1-20180525-2~exp2
++ _intel_fast_memcpy@Base 3.1-20180525-2~exp2
++ _intel_fast_memmove.A@Base 3.1-20180525-2~exp2
++ _intel_fast_memmove.M@Base 3.1-20180525-2~exp2
++ _intel_fast_memmove.P@Base 3.1-20180525-2~exp2
++ _intel_fast_memmove@Base 3.1-20180525-2~exp2
++ _intel_fast_memset.A@Base 3.1-20180525-2~exp2
++ _intel_fast_memset.J@Base 3.1-20180525-2~exp2
++ _intel_fast_memset.V@Base 3.1-20180525-2~exp2
++ _intel_fast_memset.Z@Base 3.1-20180525-2~exp2
++ _intel_fast_memset.a@Base 3.1-20180525-2~exp2
++ _intel_fast_memset@Base 3.1-20180525-2~exp2
+  _rl_abort_internal@Base 2.11-20080614-0
+  _rl_print_completions_horizontally@Base 2.11-20080614-0
+  _rl_qsort_string_compare@Base 2.11-20080614-0
+   dh_shlibdeps
+dpkg-shlibdeps: warning: package could avoid a useless dependency if debian/libedit2/usr/lib/x86_64-linux-gnu/libedit.so.2.0.58 was not linked against libdl.so.2 (it uses none of the library's symbols)
+   dh_installdeb
+   dh_gencontrol
+   dh_md5sums
+   dh_builddeb
+dpkg-deb: building package 'libedit2-dbgsym' in '../libedit2-dbgsym_3.1-20180525-2~exp2_amd64.deb'.
+dpkg-deb: building package 'libedit2' in '../libedit2_3.1-20180525-2~exp2_amd64.deb'.
+dpkg-deb: building package 'libedit-dev' in '../libedit-dev_3.1-20180525-2~exp2_amd64.deb'.
+ dpkg-genbuildinfo --build=binary
+ dpkg-genchanges --build=binary >../libedit_3.1-20180525-2~exp2_amd64.changes
+dpkg-genchanges: info: binary-only upload (no source code included)
+ dpkg-source --after-build .
+dpkg-source: info: unapplying termcap.patch
+dpkg-source: info: unapplying conflictmanpages.diff
+dpkg-source: info: unapplying PATH_MAX.diff
+dpkg-source: info: unapplying wcsdup.patch
+dpkg-source: info: unapplying libbsd.patch
+dpkg-source: info: unapplying update-soname.diff
+dpkg-buildpackage: info: binary-only upload (no source included)
+Now running lintian libedit_3.1-20180525-2~exp2_amd64.changes ...
+W: libedit2: manpage-has-errors-from-man usr/share/man/man7/editline.7edit.gz  .Nx: Unknown NetBSD version `8' (#931)
+N: 2 tags overridden (1 error, 1 warning)
+Finished running lintian.

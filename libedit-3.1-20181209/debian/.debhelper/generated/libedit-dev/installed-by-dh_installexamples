@@ -1,0 +1,5 @@
+./examples/fileman.c
+./examples/tc1.c
+./examples/wtc1.c
+./examples/Makefile.am
+./examples/Makefile.in

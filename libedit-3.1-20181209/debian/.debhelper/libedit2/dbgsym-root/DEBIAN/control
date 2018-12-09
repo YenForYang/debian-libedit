@@ -1,0 +1,15 @@
+Package: libedit2-dbgsym
+Source: libedit
+Version: 3.1-20181209-1
+Auto-Built-Package: debug-symbols
+Architecture: amd64
+Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Installed-Size: 216
+Depends: libedit2 (= 3.1-20181209-1)
+Breaks: libedit2-dbg (<< 3.1-20180525-2~)
+Replaces: libedit2-dbg (<< 3.1-20180525-2~)
+Section: debug
+Priority: optional
+Multi-Arch: same
+Description: debug symbols for libedit2
+Build-Ids: 672968b339fabba554784a2ed55fb7aad895db0b

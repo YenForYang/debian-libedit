@@ -1,0 +1,13 @@
+a865a9a9a7b666e236cf795caecc7b99  usr/include/editline/readline.h
+7a89fe6120ef912aabc3d7b634721445  usr/include/histedit.h
+5409e773efdbc3c0612fb6503e075066  usr/lib/x86_64-linux-gnu/libedit.a
+bb38b336b4bc91ff60d10c4cb15ae6c3  usr/lib/x86_64-linux-gnu/pkgconfig/libedit.pc
+a1b020bf299c436667e002550c13bdd5  usr/share/doc/libedit-dev/changelog.Debian.gz
+e8e0f811229d5fcf5dd8761a502dd440  usr/share/doc/libedit-dev/changelog.gz
+f7af8917847d961cd40ec83a79dea107  usr/share/doc/libedit-dev/copyright
+11b6de190f682b6577213d94a277f2a4  usr/share/doc/libedit-dev/examples/Makefile.am
+c9d68c436d5ee4844cbe5ca4a2198dd4  usr/share/doc/libedit-dev/examples/Makefile.in
+85a4bbd3aa38a8c2e368646e13451dbc  usr/share/doc/libedit-dev/examples/fileman.c
+a9fa4dec4b8e44e2a945b45b81bdf0bc  usr/share/doc/libedit-dev/examples/tc1.c
+c746920aa29de783667d839ac1f01599  usr/share/doc/libedit-dev/examples/wtc1.c
+657f714751b37df10757514558ef8f4b  usr/share/man/man3/editline.3.gz
